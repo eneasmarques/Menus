@@ -3,13 +3,15 @@ unit Menus.Controller.ListBox.Itens.Factory;
 interface
 
 uses
-  Menus.Controller.Interfaces;
+  Menus.Controller.Interfaces, Menus.Controller.ListBox.Itens.Default,
+  Menus.Controller.ListBox.Default;
 
   type
     TControllerListBoxItensFactory = class(TInterfacedObject, iControllerListBoxItensFactory)
       constructor Create;
       destructor Destroy; override;
       class function New : iControllerListBoxItensFactory;
+      function Default : iControllerListBoxItensDefault;
     end;
 
 implementation
@@ -19,6 +21,11 @@ implementation
 constructor TControllerListBoxItensFactory.Create;
 begin
 
+end;
+
+function TControllerListBoxItensFactory.Default: iControllerListBoxItensDefault;
+begin
+  Result := TControllerListBoxItensDefault.New;
 end;
 
 destructor TControllerListBoxItensFactory.Destroy;
