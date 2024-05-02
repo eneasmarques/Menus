@@ -37,6 +37,11 @@ type
     function Lista : TFmxObject;
   end;
 
+  iControllerListBoxItensForm = interface
+    ['{036FA257-B924-484C-8CB9-5BD4619EDCFD}']
+    function Show : TFmxObject;
+  end;
+
 implementation
 
 end.
