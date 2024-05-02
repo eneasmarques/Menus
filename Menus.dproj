@@ -318,6 +318,9 @@
         </DCCReference>
         <DCCReference Include="Controller\Menus.Controller.Interfaces.pas"/>
         <DCCReference Include="Model\Menu.Model.Interfaces.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.ListBox.Factory.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.ListBox.Itens.Factory.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.ListBox.Itens.Default.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

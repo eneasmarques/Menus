@@ -2,7 +2,8 @@ unit Menus.Controller.ListBox.Itens.Factory;
 
 interface
 
-uses Menus.Controller.Interfaces;
+uses
+  Menus.Controller.Interfaces;
 
   type
     TControllerListBoxItensFactory = class(TInterfacedObject, iControllerListBoxItensFactory)
