@@ -22,6 +22,16 @@ type
     function OnClick(Value : TNotifyEvent) :  iControllerListBoxItensDefault;
     function Item : TFMXObject;
   end;
+
+  iControllerListBoxDefault = interface
+    ['{878A6FB1-8528-403C-A624-E0C83FB7686C}']
+    function Name(Value : String) : iControllerListBoxDefault;
+    function Align(Value : TAlignLayout) : iControllerListBoxDefault;
+    function Height(Value : Integer) : iControllerListBoxDefault;
+    function AddItem(Value : TFmxObject) : iControllerListBoxDefault;
+    function Lista : TFmxObject;
+  end;
+
 implementation
 
 end.

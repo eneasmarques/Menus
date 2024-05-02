@@ -25,6 +25,7 @@ implementation
 
 constructor TControllerListBoxItensDefault.Create;
 begin
+  FListBoxItem := TListBoxItem.Create(nil);
   FListBoxItem.Name := 'default';
   FListBoxItem.Text := 'Default';
   FListBoxItem.StyleLookup := 'listboxitemdetaillabel';
