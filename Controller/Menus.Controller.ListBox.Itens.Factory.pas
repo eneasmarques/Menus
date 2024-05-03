@@ -12,9 +12,13 @@ uses
       destructor Destroy; override;
       class function New : iControllerListBoxItensFactory;
       function Default : iControllerListBoxItensDefault;
+      function Produto : iControllerListBoxItensForm;
     end;
 
 implementation
+
+uses
+  Menus.Controller.ListBox.Itens.Produto;
 
 { TControllerListBoxItensFactory }
 
@@ -37,6 +41,11 @@ end;
 class function TControllerListBoxItensFactory.New: iControllerListBoxItensFactory;
 begin
   Result := Self.Create;
+end;
+
+function TControllerListBoxItensFactory.Produto: iControllerListBoxItensForm;
+begin
+  Result := TControllerListBoxItensProduto.New;
 end;
 
 end.
