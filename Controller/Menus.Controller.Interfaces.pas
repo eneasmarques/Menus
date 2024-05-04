@@ -23,6 +23,7 @@ type
     ['{4F1DC6D8-6E94-4240-A45F-348BD30A15D1}']
     function Default: iControllerListBoxItensDefault;
     function Produto: iControllerListBoxItensForm;
+    function Cliente: iControllerListBoxItensForm;
   end;
 
   iControllerListBoxFactory = interface

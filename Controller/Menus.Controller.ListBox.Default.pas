@@ -50,7 +50,7 @@ begin
   FListBox := TListBox.Create(nil);
   FListBox.Name := 'ListaDefault';
   FListBox.Align := TAlignLayout.Client;
-  FListBox.Height := 60;
+  FListBox.ItemHeight := 60;
 end;
 
 destructor TControllerListBoxDefault.Destroy;

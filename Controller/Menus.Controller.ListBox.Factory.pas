@@ -20,6 +20,9 @@ type
 
 implementation
 
+uses
+  Menus.Controller.ListBox.Principal;
+
 { TControllerListBoxFactory }
 
 constructor TControllerListBoxFactory.Create;

@@ -13,14 +13,21 @@ uses
       class function New : iControllerListBoxItensFactory;
       function Default : iControllerListBoxItensDefault;
       function Produto : iControllerListBoxItensForm;
+      function Cliente : iControllerListBoxItensForm;
     end;
 
 implementation
 
 uses
-  Menus.Controller.ListBox.Itens.Produto;
+  Menus.Controller.ListBox.Itens.Produto,
+  Menus.Controller.ListBox.Itens.Cliente;
 
 { TControllerListBoxItensFactory }
+
+function TControllerListBoxItensFactory.Cliente: iControllerListBoxItensForm;
+begin
+  Result := TControllerListBoxItensCliente.New;
+end;
 
 constructor TControllerListBoxItensFactory.Create;
 begin
