@@ -3,7 +3,8 @@ unit Menus.Controller.ListBox.Itens.Produto;
 interface
 
 uses Menus.Controller.Interfaces, FMX.Types,
-  Menus.Controller.ListBox.Itens.Default;
+  Menus.Controller.ListBox.Itens.Default, Menus.View.Cliente,
+  Menus.Controller.Form.Default;
 
 type
   TControllerLIstBoxItensProduto = class(TInterfacedObject, iControllerListBoxItensForm)
@@ -11,6 +12,7 @@ type
     destructor Destroy; override;
     class function New : iControllerListBoxItensForm;
     function Show : TFmxObject;
+    procedure onClick(Sender : TObject);
   end;
 
 implementation
@@ -36,12 +38,18 @@ begin
   Result := Self.Create;
 end;
 
+procedure TControllerLIstBoxItensProduto.onClick(Sender: TObject);
+begin
+  TControllerFormDefault.CreateForm('TFrmProduto');
+end;
+
 function TControllerLIstBoxItensProduto.Show: TFmxObject;
 begin
   Result := TControllerListBoxItensFactory.New
                 .Default
                 .Name('btnProduto')
                 .Text('Produtos')
+                .onClick(onClick)
                 .Item;
 end;
 

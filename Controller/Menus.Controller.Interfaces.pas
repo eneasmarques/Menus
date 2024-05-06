@@ -30,6 +30,8 @@ type
     ['{9995F794-8669-42C5-A37E-7536A6E8EAD5}']
     function Default(Container: TComponent): iControllerListBoxDefault;
     function Principal(Container: TComponent): iControllerListBoxMenu;
+    function Produto(Container: TComponent): iControllerListBoxMenu;
+    function Cliente(Container: TComponent): iControllerListBoxMenu;
   end;
 
   iControllerListBoxItensDefault = interface
