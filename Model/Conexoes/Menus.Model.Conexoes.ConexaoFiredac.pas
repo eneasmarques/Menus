@@ -25,6 +25,7 @@ type
     destructor Destroy; override;
     class function New: iModelConexao;
     function EndConexao: TComponent;
+    function Parametros : iModelConexaoParametros;
     function Database(Value: String): iModelConexaoParametros;
     function UserName(Value: String): iModelConexaoParametros;
     function Password(Value: String): iModelConexaoParametros;
@@ -92,6 +93,11 @@ end;
 class function TModelConexaoFiredac.New: iModelConexao;
 begin
   Result := Self.Create;
+end;
+
+function TModelConexaoFiredac.Parametros: iModelConexaoParametros;
+begin
+  Result := Self;
 end;
 
 function TModelConexaoFiredac.Password(Value: String): iModelConexaoParametros;
