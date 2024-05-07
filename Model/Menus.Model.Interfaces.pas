@@ -1,4 +1,4 @@
-unit Menu.Model.Interfaces;
+unit Menus.Model.Interfaces;
 
 interface
 
