@@ -4,7 +4,7 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   Menus.View.Principal in 'View\Menus.View.Principal.pas' {FrmPrincipal},
-  Menu.Model.Interfaces in 'Model\Menu.Model.Interfaces.pas',
+  Menus.Model.Interfaces in 'Model\Menus.Model.Interfaces.pas',
   Menus.Controller.Interfaces in 'Controller\Menus.Controller.Interfaces.pas',
   Menus.Controller.ListBox.Default in 'Controller\Menus.Controller.ListBox.Default.pas',
   Menus.Controller.ListBox.Factory in 'Controller\Menus.Controller.ListBox.Factory.pas',
@@ -17,7 +17,12 @@ uses
   Menus.View.Cliente in 'View\Menus.View.Cliente.pas' {FrmCliente},
   Menus.Controller.ListBox.Cliente in 'Controller\Menus.Controller.ListBox.Cliente.pas',
   Menus.Controller.ListBox.Produto in 'Controller\Menus.Controller.ListBox.Produto.pas',
-  Menus.Controller.Form.Default in 'Controller\Menus.Controller.Form.Default.pas';
+  Menus.Controller.Form.Default in 'Controller\Menus.Controller.Form.Default.pas',
+  Menus.Model.Conexoes.Interfaces in 'Model\Conexoes\Menus.Model.Conexoes.Interfaces.pas',
+  Menus.Model.Conexoes.ConexaoFiredac in 'Model\Conexoes\Menus.Model.Conexoes.ConexaoFiredac.pas',
+  Menus.Model.Conexoes.TableFiredac in 'Model\Conexoes\Menus.Model.Conexoes.TableFiredac.pas',
+  Menus.Model.Conexoes.Conexao.Factory in 'Model\Conexoes\Menus.Model.Conexoes.Conexao.Factory.pas',
+  Menus.Model.Conexoes.DataSet.Factory in 'Model\Conexoes\Menus.Model.Conexoes.DataSet.Factory.pas';
 
 {$R *.res}
 

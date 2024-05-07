@@ -26,8 +26,19 @@ type
   end;
 
   iModelDataSet = interface
+    ['{6D5B9ACE-BFCD-4832-8D69-4C6183552F21}']
     function Open(aTable : String) : iModelDataSet;
     function EndDataset : TComponent;
+  end;
+
+  iModelConexaoFactory = interface
+    ['{4F75DF35-28C0-4031-B5A4-0871DC7E7658}']
+    function ConexaoFiredac : iModelConexao;
+  end;
+
+  iModelDataSetFactory = interface
+    ['{42EFCA64-9AAD-4821-87CF-A2F4C968F9A1}']
+    function DataSetFiredac(Conexao : iModelConexao) : iModelDataSet;
   end;
 
 implementation

@@ -318,7 +318,7 @@
             <Form>FrmPrincipal</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="Model\Menu.Model.Interfaces.pas"/>
+        <DCCReference Include="Model\Menus.Model.Interfaces.pas"/>
         <DCCReference Include="Controller\Menus.Controller.Interfaces.pas"/>
         <DCCReference Include="Controller\Menus.Controller.ListBox.Default.pas"/>
         <DCCReference Include="Controller\Menus.Controller.ListBox.Factory.pas"/>
@@ -338,6 +338,11 @@
         <DCCReference Include="Controller\Menus.Controller.ListBox.Cliente.pas"/>
         <DCCReference Include="Controller\Menus.Controller.ListBox.Produto.pas"/>
         <DCCReference Include="Controller\Menus.Controller.Form.Default.pas"/>
+        <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.Interfaces.pas"/>
+        <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.ConexaoFiredac.pas"/>
+        <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.TableFiredac.pas"/>
+        <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.Conexao.Factory.pas"/>
+        <DCCReference Include="Model\Conexoes\Menus.Model.Conexoes.DataSet.Factory.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -365,13 +370,25 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="$(BDS)\Redist\osx64\libcgsqlite3.dylib" Class="DependencyModule">
-                    <Platform Name="OSX64">
+                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
-                    <Platform Name="OSX32">
+                <DeployFile LocalName="Win64\Debug\Menus.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win64">
+                        <RemoteName>Menus.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Win32\Debug\Menus.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>Menus.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\osx64\libcgsqlite3.dylib" Class="DependencyModule">
+                    <Platform Name="OSX64">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -390,9 +407,9 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Win32\Debug\Menus.exe" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="Win32">
-                        <RemoteName>Menus.exe</RemoteName>
+                <DeployFile LocalName="Win64\Debug\Menus.rsm" Configuration="Debug" Class="DebugSymbols">
+                    <Platform Name="Win64">
+                        <RemoteName>Menus.rsm</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
